@@ -182,15 +182,12 @@ function getEmotionsArray(cats) {
 }
 
 function renderEmotionsRadios(cats) {
-  let holdArray = ``
+  let holdArray = ``;
   const emotions = getEmotionsArray(cats);
   for (let emotion of emotions) {
-    holdArray += `<p>${emotion}</p>`
-    
-
+    holdArray += `<p>${emotion}</p>`;
   }
   emotionRadios.innerHTML = holdArray;
-  
 }
 
 renderEmotionsRadios(catsData);
