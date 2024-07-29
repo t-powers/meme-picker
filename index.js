@@ -1,4 +1,4 @@
-import { catsData } from "./data";
+import { catsData } from "/data.js";
 
 const emotionRadios = document.getElementById("emotion-radios");
 
