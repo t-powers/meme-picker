@@ -7,7 +7,6 @@ const gifsOnlyOption = document.getElementById("gifs-only-option");
 emotionRadios.addEventListener("change", highlightCheckedOption);
 getImageBtn.addEventListener("click", getMatchingCatsArray);
 
-
 function getMatchingCatsArray() {
   if (document.querySelector('input[type="radio"]:checked')) {
     const gifChecked = document.querySelector(
