@@ -21,7 +21,7 @@ function getMatchingCatsArray() {
         return cat.emotionTags.includes(gifChecked);
       }
     });
-    console.log(matchingCatsArray);
+    return matchingCatsArray;
   }
 }
 
