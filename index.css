@@ -94,14 +94,14 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-.gifs-check {
+.gif-check {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 16px;
 }
 
-.gifs-check-label {
+.gif-check-label {
   width: unset;
   margin-right: 5px;
 }
