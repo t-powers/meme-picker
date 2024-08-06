@@ -12,8 +12,12 @@ function getMatchingCatsArray() {
     const gifChecked = document.querySelector(
       "input[type='radio']:checked"
     ).value;
-    const isGif = gifOnlyOption.checked;
-    
+    //const isGif = gifOnlyOption.checked;
+
+    const matchingCatsArray = catsData.filter(function (cat) {
+      return cat.emotionTags.includes(gifChecked);
+    });
+    console.log(matchingCatsArray);
   }
 }
 
@@ -52,9 +56,6 @@ function renderEmotionsRadios(cats) {
 }
 
 renderEmotionsRadios(catsData);
-
-
-
 
 // const thrillers = series.filter(function(thriller){
 //     return thriller.genres.includes('thriller')
