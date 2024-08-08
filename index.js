@@ -17,18 +17,6 @@ function highlightCheckedOption(e) {
   document.getElementById(e.target.id).parentElement.classList.add("highlight");
 }
 
-function getEmotionsArray(cats) {
-  const emotionsArray = [];
-  for (let cat of cats) {
-    for (let emotion of cat.emotionTags) {
-      if (!emotionsArray.includes(emotion)) {
-        emotionsArray.push(emotion);
-      }
-    }
-  }
-  return emotionsArray;
-}
-
 function renderCat() {
   const catObject = getSingleCatObject();
   memeModalInner.innerHTML = `
@@ -67,6 +55,18 @@ function getMatchingCatsArray() {
     });
     return matchingCatsArray;
   }
+}
+
+function getEmotionsArray(cats) {
+  const emotionsArray = [];
+  for (let cat of cats) {
+    for (let emotion of cat.emotionTags) {
+      if (!emotionsArray.includes(emotion)) {
+        emotionsArray.push(emotion);
+      }
+    }
+  }
+  return emotionsArray;
 }
 
 function renderEmotionsRadios(cats) {
