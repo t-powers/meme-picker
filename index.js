@@ -10,6 +10,10 @@ emotionRadios.addEventListener("change", highlightCheckedOption);
 getImageBtn.addEventListener("click", getMatchingCatsArray);
 
 function highlightCheckedOption(e) {
+  const radios = document.getElementsByClassName("radio");
+  for (let radio of radios) {
+    radio.classList.remove("highlight");
+  }
   document.getElementById(e.target.id).parentElement.classList.add("highlight");
 }
 
