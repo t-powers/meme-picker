@@ -13,6 +13,7 @@ memeModalCloseBtn.addEventListener("click", closeModal);
 
 getImageBtn.addEventListener("click", renderCat);
 
+//highlights the radio button and emotion 
 function highlightCheckedOption(e) {
   const radios = document.getElementsByClassName("radio");
   for (let radio of radios) {
@@ -21,10 +22,12 @@ function highlightCheckedOption(e) {
   document.getElementById(e.target.id).parentElement.classList.add("highlight");
 }
 
+//close modal using the X
 function closeModal() {
   memeModal.style.display = "none";
 }
 
+//render cat image to DOM
 function renderCat() {
   const catObject = getSingleCatObject();
   memeModalInner.innerHTML = `
@@ -37,6 +40,7 @@ function renderCat() {
   memeModal.style.display = "flex";
 }
 
+//randomly capture cat object from array
 function getSingleCatObject() {
   const catsArray = getMatchingCatsArray();
 
@@ -48,6 +52,7 @@ function getSingleCatObject() {
   }
 }
 
+//filter checked radio emotion
 function getMatchingCatsArray() {
   if (document.querySelector('input[type="radio"]:checked')) {
     const selectedEmotion = document.querySelector(
@@ -66,6 +71,7 @@ function getMatchingCatsArray() {
   }
 }
 
+//push unique emotions to new array
 function getEmotionsArray(cats) {
   const emotionsArray = [];
   for (let cat of cats) {
@@ -78,6 +84,7 @@ function getEmotionsArray(cats) {
   return emotionsArray;
 }
 
+//render radios to DOM
 function renderEmotionsRadios(cats) {
   let radioItems = ``;
   const emotions = getEmotionsArray(cats);
