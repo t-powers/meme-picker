@@ -13,7 +13,7 @@ memeModalCloseBtn.addEventListener("click", closeModal);
 
 getImageBtn.addEventListener("click", renderCat);
 
-//highlights the radio button and emotion 
+//highlights the radio button and emotion
 function highlightCheckedOption(e) {
   const radios = document.getElementsByClassName("radio");
   for (let radio of radios) {
@@ -52,7 +52,7 @@ function getSingleCatObject() {
   }
 }
 
-//filter checked radio emotion
+// return filtered variable that filtered and includes only checked options
 function getMatchingCatsArray() {
   if (document.querySelector('input[type="radio"]:checked')) {
     const selectedEmotion = document.querySelector(
