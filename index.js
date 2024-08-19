@@ -52,7 +52,7 @@ function getSingleCatObject() {
   }
 }
 
-// return filtered variable that filtered and includes only checked options
+// return filtered variable that includes only checked options
 function getMatchingCatsArray() {
   if (document.querySelector('input[type="radio"]:checked')) {
     const selectedEmotion = document.querySelector(
